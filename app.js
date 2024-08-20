@@ -16,7 +16,7 @@ app.use('/graphql', graphqlHTTP({
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+    console.log(`Server running at http://localhost:${port}/graphql`);
     console.log(`Swagger docs available at http://localhost:${port}/api-docs`);
 });
 

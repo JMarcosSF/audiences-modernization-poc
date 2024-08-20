@@ -10,7 +10,7 @@ Brief description of the project.
 ## Installation
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/your-repo.git
+    git clone git@github.com:JMarcosSF/audiences-modernization-poc.git
     ```
 2. Navigate to the project directory:
     ```sh
@@ -26,7 +26,7 @@ Brief description of the project.
     ```sh
     npm start
     ```
-2. Open your browser and navigate to `http://localhost:3000`
+2. Open your browser and navigate to `http://localhost:3000/graphql`
 
 ## Running Tests
 1. Run the tests:
