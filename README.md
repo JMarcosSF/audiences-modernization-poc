@@ -64,44 +64,50 @@ To test the GraphQL API, you can use the following queries:
     name
     labelIds
     visitorRetentionDays
-  },
+  }
   query2: audiences(name: "s") {
     id
     name
     labelIds
     visitorRetentionDays
-  },
-  query3: audiences(labelId: "550cd119-bbc5-4d7d-d2bf-8970a9653932") {
+  }
+  query3: audiences(labelIds: ["550cd119-bbc5-4d7d-d2bf-8970a9653932"]) {
     id
     name
     labelIds
     visitorRetentionDays
-  },
-  query4: audiences(visitorRetentionDays: 30) {
+  }
+  query4: audiences(labelIds: ["550cd119-bbc5-4d7d-d2bf-8970a9653932", "5505666f-0383-4d09-a56a-c79d92f6c6e5"]) {
     id
     name
     labelIds
     visitorRetentionDays
-  },
-  query5: audiences(name: "s", labelId: "550cd119-bbc5-4d7d-d2bf-8970a9653932") {
+  }
+  query5: audiences(visitorRetentionDays: 30) {
     id
     name
     labelIds
     visitorRetentionDays
-  },
-  query6: audiences(name: "s", visitorRetentionDays: 30) {
+  }
+  query6: audiences(name: "s", labelIds: ["550cd119-bbc5-4d7d-d2bf-8970a9653932"]) {
     id
     name
     labelIds
     visitorRetentionDays
-  },
-  query7: audiences(labelId: "550cd119-bbc5-4d7d-d2bf-8970a9653932", visitorRetentionDays: 30) {
+  }
+  query7: audiences(name: "s", visitorRetentionDays: 30) {
     id
     name
     labelIds
     visitorRetentionDays
-  },
-  query8: audiences(name: "s", labelId: "550cd119-bbc5-4d7d-d2bf-8970a9653932", visitorRetentionDays: 30) {
+  }
+  query8: audiences(labelIds: ["550cd119-bbc5-4d7d-d2bf-8970a9653932", "5505666f-0383-4d09-a56a-c79d92f6c6e5"], visitorRetentionDays: 30) {
+    id
+    name
+    labelIds
+    visitorRetentionDays
+  }
+  query9: audiences(name: "s", labelIds: ["550cd119-bbc5-4d7d-d2bf-8970a9653932"], visitorRetentionDays: 30) {
     id
     name
     labelIds
