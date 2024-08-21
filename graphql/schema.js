@@ -50,7 +50,8 @@ const data = [
         "visitorRetentionDays": 0,
         "createdByPlay": [],
         "labelIds": [
-            "5505666f-0383-4d09-a56a-c79d92f6c6e5"
+            "5505666f-0383-4d09-a56a-c79d92f6c6e5",
+            "550cd119-bbc5-4d7d-d2bf-8970a9653932"
         ],
         "editable": true,
         "audienceDBEnabled": true,
@@ -68,7 +69,7 @@ const data = [
         "name": "Test seg in aud",
         "logic": "{\"conditionBlocks\":[{\"blockOperator\":\"and\",\"blockExpression\":[{\"blockOperator\":\"and\",\"blockExpression\":[{\"operand1\":\"dates.23\",\"operand2\":null,\"operator\":\"IS_ASSIGNED\"}]},{\"blockOperator\":\"and\",\"blockExpression\":[{\"operand1\":\"flags.5006\",\"operand2\":null,\"operator\":\"is_true\"}]}]},{\"blockOperator\":\"not\",\"blockExpression\":[]}]}",
         "perspective": "badges",
-        "visitorRetentionDays": 0,
+        "visitorRetentionDays": 30,
         "createdByPlay": [],
         "labelIds": [
             "550cd119-bbc5-4d7d-d2bf-8970a9653932"
@@ -79,6 +80,108 @@ const data = [
         "creationDate": "2024-01-12T20:57:23.532Z",
         "updatedBy": "user1@tealium.com",
         "updatedDate": "2024-02-21T18:56:37.225Z",
+        "segmentsIds": [],
+        "start": null,
+        "end": null,
+        "notes": ""
+    },
+    {
+        "id": "qcarlin_main_103",
+        "name": "Sample Audience",
+        "logic": "{\"conditionBlocks\":[{\"blockOperator\":\"and\",\"blockExpression\":[{\"operand1\":\"dates.23\",\"operand2\":null,\"operator\":\"IS_ASSIGNED\"}]},{\"blockOperator\":\"not\",\"blockExpression\":[]}]}",
+        "perspective": "badges",
+        "visitorRetentionDays": 30,
+        "createdByPlay": [],
+        "labelIds": [
+            "550cd119-bbc5-4d7d-d2bf-8970a9653932"
+        ],
+        "editable": true,
+        "audienceDBEnabled": true,
+        "createdBy": "user2@tealium.com",
+        "creationDate": "2024-02-12T20:57:23.532Z",
+        "updatedBy": "user2@tealium.com",
+        "updatedDate": "2024-03-21T18:56:37.225Z",
+        "segmentsIds": [],
+        "start": null,
+        "end": null,
+        "notes": ""
+    },
+    {
+        "id": "qcarlin_main_104",
+        "name": "Another Audience",
+        "logic": "{\"conditionBlocks\":[{\"blockOperator\":\"and\",\"blockExpression\":[{\"operand1\":\"dates.23\",\"operand2\":null,\"operator\":\"IS_ASSIGNED\"}]},{\"blockOperator\":\"not\",\"blockExpression\":[]}]}",
+        "perspective": "badges",
+        "visitorRetentionDays": 30,
+        "createdByPlay": [],
+        "labelIds": [],
+        "editable": true,
+        "audienceDBEnabled": true,
+        "createdBy": "user3@tealium.com",
+        "creationDate": "2024-03-12T20:57:23.532Z",
+        "updatedBy": "user3@tealium.com",
+        "updatedDate": "2024-04-21T18:56:37.225Z",
+        "segmentsIds": [],
+        "start": null,
+        "end": null,
+        "notes": ""
+    },
+    {
+        "id": "qcarlin_main_105",
+        "name": "Sample Audience S",
+        "logic": "{\"conditionBlocks\":[{\"blockOperator\":\"and\",\"blockExpression\":[{\"operand1\":\"dates.23\",\"operand2\":null,\"operator\":\"IS_ASSIGNED\"}]},{\"blockOperator\":\"not\",\"blockExpression\":[]}]}",
+        "perspective": "badges",
+        "visitorRetentionDays": 30,
+        "createdByPlay": [],
+        "labelIds": [
+            "550cd119-bbc5-4d7d-d2bf-8970a9653932"
+        ],
+        "editable": true,
+        "audienceDBEnabled": true,
+        "createdBy": "user4@tealium.com",
+        "creationDate": "2024-04-12T20:57:23.532Z",
+        "updatedBy": "user4@tealium.com",
+        "updatedDate": "2024-05-21T18:56:37.225Z",
+        "segmentsIds": [],
+        "start": null,
+        "end": null,
+        "notes": ""
+    },
+    {
+        "id": "qcarlin_main_106",
+        "name": "Audience S",
+        "logic": "{\"conditionBlocks\":[{\"blockOperator\":\"and\",\"blockExpression\":[{\"operand1\":\"dates.23\",\"operand2\":null,\"operator\":\"IS_ASSIGNED\"}]},{\"blockOperator\":\"not\",\"blockExpression\":[]}]}",
+        "perspective": "badges",
+        "visitorRetentionDays": 30,
+        "createdByPlay": [],
+        "labelIds": [],
+        "editable": true,
+        "audienceDBEnabled": true,
+        "createdBy": "user5@tealium.com",
+        "creationDate": "2024-05-12T20:57:23.532Z",
+        "updatedBy": "user5@tealium.com",
+        "updatedDate": "2024-06-21T18:56:37.225Z",
+        "segmentsIds": [],
+        "start": null,
+        "end": null,
+        "notes": ""
+    },
+    {
+        "id": "qcarlin_main_107",
+        "name": "New Audience for Query8",
+        "logic": "{\"conditionBlocks\":[{\"blockOperator\":\"and\",\"blockExpression\":[{\"operand1\":\"dates.23\",\"operand2\":null,\"operator\":\"IS_ASSIGNED\"}]},{\"blockOperator\":\"not\",\"blockExpression\":[]}]}",
+        "perspective": "badges",
+        "visitorRetentionDays": 30,
+        "createdByPlay": [],
+        "labelIds": [
+            "550cd119-bbc5-4d7d-d2bf-8970a9653932",
+            "5505666f-0383-4d09-a56a-c79d92f6c6e5"
+        ],
+        "editable": true,
+        "audienceDBEnabled": true,
+        "createdBy": "user6@tealium.com",
+        "creationDate": "2024-08-12T20:57:23.532Z",
+        "updatedBy": "user6@tealium.com",
+        "updatedDate": "2024-09-21T18:56:37.225Z",
         "segmentsIds": [],
         "start": null,
         "end": null,
@@ -110,7 +213,6 @@ const AudienceType = new GraphQLObjectType({
     })
 });
 
-// Define the RootQuery
 const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     fields: {
@@ -118,30 +220,28 @@ const RootQuery = new GraphQLObjectType({
             type: new GraphQLList(AudienceType),
             args: {
                 name: { type: GraphQLString },
-                labelId: { type: GraphQLString },
+                labelIds: { type: new GraphQLList(GraphQLString) },
                 visitorRetentionDays: { type: GraphQLInt }
             },
             resolve(parent, args) {
                 return data.filter(audience => {
-                    return (!args.name || audience.name.includes(args.name)) &&
-                        (!args.labelId || audience.labelIds.includes(args.labelId)) &&
-                        (!args.visitorRetentionDays || audience.visitorRetentionDays === args.visitorRetentionDays);
+                    let matches = true;
+                    if (args.name) {
+                        matches = matches && audience.name.includes(args.name);
+                    }
+                    if (args.labelIds && args.labelIds.length > 0) {
+                        matches = matches && args.labelIds.every(labelId => audience.labelIds.includes(labelId));
+                    }
+                    if (args.visitorRetentionDays !== undefined) {
+                        matches = matches && audience.visitorRetentionDays === args.visitorRetentionDays;
+                    }
+                    return matches;
                 });
-            }
-        },
-        audience: {
-            type: AudienceType,
-            args: { id: { type: GraphQLString } },
-            resolve(parent, args) {
-                return data.find(audience => audience.id === args.id);
             }
         }
     }
 });
 
-// Define the Schema
-const schema = new GraphQLSchema({
+module.exports = new GraphQLSchema({
     query: RootQuery
 });
-
-module.exports = schema;
