@@ -26,7 +26,9 @@ Brief description of the project.
     ```sh
     node app.js
     ```
-2. Open your browser and navigate to `http://localhost:3000/graphql`
+2. Open your browser and navigate to:
+   - GraphQL endpoint: [http://localhost:3000/graphql/](http://localhost:3000/graphql/)
+   - Swagger documentation: [http://localhost:3000/api-docs/](http://localhost:3000/api-docs/)
 
 ## Running Tests
 1. Run the tests:
