@@ -227,7 +227,8 @@ const RootQuery = new GraphQLObjectType({
                 return data.filter(audience => {
                     let matches = true;
                     if (args.name) {
-                        matches = matches && audience.name.includes(args.name);
+                        const nameLower = args.name.toLowerCase();
+                        matches = matches && audience.name.toLowerCase().startsWith(nameLower);
                     }
                     if (args.labelIds && args.labelIds.length > 0) {
                         matches = matches && args.labelIds.every(labelId => audience.labelIds.includes(labelId));
