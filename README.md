@@ -24,7 +24,7 @@ Brief description of the project.
 ## Running the Project
 1. Start the development server:
     ```sh
-    npm start
+    node app.js
     ```
 2. Open your browser and navigate to `http://localhost:3000/graphql`
 
@@ -50,3 +50,59 @@ Brief description of the project.
 
 ## License
 This project is licensed under the MIT License - see the `LICENSE` file for details.
+
+## Example GraphQL Queries
+
+To test the GraphQL API, you can use the following queries:
+
+```graphql
+{
+  query1: audiences {
+    id
+    name
+    labelIds
+    visitorRetentionDays
+  },
+  query2: audiences(name: "s") {
+    id
+    name
+    labelIds
+    visitorRetentionDays
+  },
+  query3: audiences(labelId: "550cd119-bbc5-4d7d-d2bf-8970a9653932") {
+    id
+    name
+    labelIds
+    visitorRetentionDays
+  },
+  query4: audiences(visitorRetentionDays: 30) {
+    id
+    name
+    labelIds
+    visitorRetentionDays
+  },
+  query5: audiences(name: "s", labelId: "550cd119-bbc5-4d7d-d2bf-8970a9653932") {
+    id
+    name
+    labelIds
+    visitorRetentionDays
+  },
+  query6: audiences(name: "s", visitorRetentionDays: 30) {
+    id
+    name
+    labelIds
+    visitorRetentionDays
+  },
+  query7: audiences(labelId: "550cd119-bbc5-4d7d-d2bf-8970a9653932", visitorRetentionDays: 30) {
+    id
+    name
+    labelIds
+    visitorRetentionDays
+  },
+  query8: audiences(name: "s", labelId: "550cd119-bbc5-4d7d-d2bf-8970a9653932", visitorRetentionDays: 30) {
+    id
+    name
+    labelIds
+    visitorRetentionDays
+  }
+}
