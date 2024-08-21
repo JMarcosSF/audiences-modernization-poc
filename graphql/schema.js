@@ -213,18 +213,33 @@ const AudienceType = new GraphQLObjectType({
     })
 });
 
+const PaginationType = new GraphQLObjectType({
+    name: 'Pagination',
+    fields: () => ({
+        totalItems: { type: GraphQLInt },
+        totalPages: { type: GraphQLInt },
+        currentPage: { type: GraphQLInt },
+        pageSize: { type: GraphQLInt },
+        hasNext: { type: GraphQLBoolean },
+        hasPrevious: { type: GraphQLBoolean },
+        items: { type: new GraphQLList(AudienceType) }
+    })
+});
+
 const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     fields: {
         audiences: {
-            type: new GraphQLList(AudienceType),
+            type: PaginationType,
             args: {
                 name: { type: GraphQLString },
                 labelIds: { type: new GraphQLList(GraphQLString) },
-                visitorRetentionDays: { type: GraphQLInt }
+                visitorRetentionDays: { type: GraphQLInt },
+                page: { type: GraphQLInt },
+                pageSize: { type: GraphQLInt }
             },
             resolve(parent, args) {
-                return data.filter(audience => {
+                let filteredData = data.filter(audience => {
                     let matches = true;
                     if (args.name) {
                         const nameLower = args.name.toLowerCase();
@@ -238,6 +253,27 @@ const RootQuery = new GraphQLObjectType({
                     }
                     return matches;
                 });
+
+                const totalItems = filteredData.length;
+                const pageSize = args.pageSize || 10;
+                const currentPage = args.page || 1;
+                const totalPages = Math.ceil(totalItems / pageSize);
+                const hasNext = currentPage < totalPages;
+                const hasPrevious = currentPage > 1;
+
+                const startIndex = (currentPage - 1) * pageSize;
+                const endIndex = startIndex + pageSize;
+                const items = filteredData.slice(startIndex, endIndex);
+
+                return {
+                    totalItems,
+                    totalPages,
+                    currentPage,
+                    pageSize,
+                    hasNext,
+                    hasPrevious,
+                    items
+                };
             }
         }
     }
